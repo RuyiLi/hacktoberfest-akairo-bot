@@ -1,0 +1,30 @@
+{
+    "name": "hacktoberfest-akairo-bot",
+    "version": "1.0.0",
+    "description": "A Discord bot using the Akairo framework to increase your PR count for Hacktoberfest!",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "discord-akairo": "^7.5.6",
+        "discord.js": "^12.0.0-dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RuyiLi/hacktoberfest-akairo-bot.git"
+    },
+    "keywords": [
+        "hacktoberfest",
+        "discord",
+        "akairo",
+        "discord.js",
+        "bot"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RuyiLi/hacktoberfest-akairo-bot/issues"
+    },
+    "homepage": "https://github.com/RuyiLi/hacktoberfest-akairo-bot#readme"
+}
