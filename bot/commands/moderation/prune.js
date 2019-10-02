@@ -35,8 +35,7 @@ class PruneCommand extends Command {
 			return message.channel.send('You either didn\'t enter a number, or you entered a number larger than 50. ' + 'Please try again.');
 		}
 		try {
-			const messages = await message.channel.fetchMessages({ limit: count + 1 });
-			await message.channel.bulkDelete(messages, true);
+			await message.channel.bulkDelete(count + 1, true);
 			await message.channel.send(`Deleting ${messageCount}, please wait...`).then((msg) => {
 				msg.edit(`Deleted ${messageCount}.`).then(res => res.delete(15000));
 			});
