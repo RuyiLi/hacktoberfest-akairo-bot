@@ -6,9 +6,13 @@ const {
 } = require('discord-akairo');
 const { join } = require('path');
 
+// Paths
 const commandsPath = join(__dirname, '..', 'commands/');
 const listenersPath = join(__dirname, '..', 'listeners/');
 const inhibitorsPath = join(__dirname, '..', 'inhibitors/');
+
+// Import Logger
+const Logger = require('../util/logger');
 
 class HacktoberClient extends AkairoClient {
 	constructor () {
@@ -45,6 +49,7 @@ class HacktoberClient extends AkairoClient {
 		this.inhibitorHandler = new InhibitorHandler(this, {
 			directory: inhibitorsPath
 		});
+		this.logger = Logger;
 	}
 
 	_init () {
