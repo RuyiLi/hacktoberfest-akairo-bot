@@ -2,17 +2,19 @@
 	"name": "hacktoberfest-akairo-bot",
 	"version": "1.0.0",
 	"description": "A Discord bot using the Akairo framework to increase your PR count for Hacktoberfest!",
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/RuyiLi/hacktoberfest-akairo-bot/issues"
+	},
+	"homepage": "https://github.com/RuyiLi/hacktoberfest-akairo-bot#readme",
 	"main": "index.js",
 	"scripts": {
 		"start": "node .",
 		"dev": "nodemon .",
 		"lint": "eslint ./ --ext .js"
 	},
-	"dependencies": {
-		"common-tags": "^1.8.0",
-		"discord-akairo": "discord-akairo/discord-akairo",
-		"discord.js": "discordjs/discord.js"
-	},
+
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/RuyiLi/hacktoberfest-akairo-bot.git"
@@ -24,12 +26,11 @@
 		"discord.js",
 		"bot"
 	],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/RuyiLi/hacktoberfest-akairo-bot/issues"
+	"dependencies": {
+		"common-tags": "^1.8.0",
+		"discord-akairo": "discord-akairo/discord-akairo",
+		"discord.js": "discordjs/discord.js"
 	},
-	"homepage": "https://github.com/RuyiLi/hacktoberfest-akairo-bot#readme",
 	"devDependencies": {
 		"dotenv": "^8.1.0",
 		"eslint": "^6.5.1",
