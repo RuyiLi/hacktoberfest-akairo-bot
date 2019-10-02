@@ -14,7 +14,6 @@
 		"dev": "nodemon .",
 		"lint": "eslint ./ --ext .js"
 	},
-
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/RuyiLi/hacktoberfest-akairo-bot.git"
@@ -27,6 +26,7 @@
 		"bot"
 	],
 	"dependencies": {
+		"axios": "^0.19.0",
 		"common-tags": "^1.8.0",
 		"discord-akairo": "discord-akairo/discord-akairo",
 		"discord.js": "discordjs/discord.js"
