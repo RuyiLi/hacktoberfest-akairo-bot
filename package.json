@@ -1,70 +1,69 @@
 {
-	"name": "hacktoberfest-akairo-bot",
-	"version": "1.0.0",
-	"description": "A Discord bot using the Akairo framework to increase your PR count for Hacktoberfest!",
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/RuyiLi/hacktoberfest-akairo-bot/issues"
-	},
-	"homepage": "https://github.com/RuyiLi/hacktoberfest-akairo-bot#readme",
-	"main": "index.js",
-	"scripts": {
-		"start": "node .",
-		"dev": "nodemon .",
-		"lint": "eslint ./ --ext .js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/RuyiLi/hacktoberfest-akairo-bot.git"
-	},
-	"keywords": [
-		"hacktoberfest",
-		"discord",
-		"akairo",
-		"discord.js",
-		"bot"
-	],
-	"dependencies": {
-		"axios": "^0.19.0",
-		"chalk": "^2.4.2",
-		"common-tags": "^1.8.0",
-		"discord-akairo": "discord-akairo/discord-akairo",
-		"discord.js": "discordjs/discord.js",
-		"moment": "^2.24.0",
-		"pluralize": "^8.0.0"
-	},
-	"devDependencies": {
-		"dotenv": "^8.1.0",
-		"eslint": "^6.5.1",
-		"eslint-config-standard": "^14.1.0",
-		"eslint-plugin-import": "^2.18.2",
-		"eslint-plugin-node": "^10.0.0",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-standard": "^4.0.1",
-		"nodemon": "^1.19.3"
-	},
-	"eslintConfig": {
-		"extends": "standard",
-		"parserOptions": {
-			"ecmaVersion": 2017
-		},
-		"env": {
-			"es6": true
-		},
-		"rules": {
-			"no-tabs": 0,
-			"indent": [
-				"error",
-				"tab"
-			],
-			"semi": [
-				"error",
-				"always"
-			],
-			"no-extra-semi": [
-				"error"
-			]
-		}
-	}
+  "name": "hacktoberfest-akairo-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot using the Akairo framework to increase your PR count for Hacktoberfest!",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuyiLi/hacktoberfest-akairo-bot/issues"
+  },
+  "homepage": "https://github.com/RuyiLi/hacktoberfest-akairo-bot#readme",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "lint": "eslint ./ --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuyiLi/hacktoberfest-akairo-bot.git"
+  },
+  "keywords": [
+    "hacktoberfest",
+    "discord",
+    "akairo",
+    "discord.js",
+    "bot"
+  ],
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "common-tags": "^1.8.0",
+    "discord-akairo": "discord-akairo/discord-akairo",
+    "discord.js": "discordjs/discord.js",
+    "moment": "^2.24.0",
+    "pluralize": "^8.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^1.19.3"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true
+    },
+    "rules": {
+      "no-tabs": 0,
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-extra-semi": [
+        "error"
+      ]
+    }
+  }
 }

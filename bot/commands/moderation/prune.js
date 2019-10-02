@@ -1,30 +1,30 @@
 const { Command } = require('discord-akairo');
 const pluralize = require('pluralize');
 class PruneCommand extends Command {
-	constructor() {
+	constructor () {
 		super('prune', {
 			aliases: ['prune'],
 			category: 'moderation',
 			description: {
 				content: 'Prunes up to 50 messages in the channel it was sent in.',
 				usage: '[number]',
-				examples: ['1-50'],
+				examples: ['1-50']
 			},
 			args: [
 				{
 					id: 'count',
-					type: 'number',
-				},
+					type: 'number'
+				}
 			],
 			channelRestriction: 'guild',
 			cooldown: 5000,
 			clientPermissions: ['MANAGE_MESSAGES', 'READ_MESSAGE_HISTORY'],
-			userPermissions: 'MANAGE_MESSAGES',
+			userPermissions: 'MANAGE_MESSAGES'
 
 		});
 	}
 
-	async exec(message, args) {
+	async exec (message, args) {
 		const channel = message.channel;
 		const count = args.count;
 		const messageCount = pluralize('message', count, true);
@@ -41,8 +41,7 @@ class PruneCommand extends Command {
 				msg.edit(`Deleted ${messageCount}.`).then(res => res.delete(15000));
 			});
 			this.client.logger.info(`Deleted ${messageCount} from #${channel.name} in the guild ${message.guild}.`);
-		}
-		catch (err) {
+		} catch (err) {
 			this.client.logger.error(`Unable to delete messages!\n\n${err}`);
 			message.channel.send(`Sorry, I was unable to delete any messages!\n\`\`\`${err}\`\`\``);
 		}
