@@ -54,7 +54,10 @@ class CompareCommand extends Command {
 	}
 
 	exec (msg, { x, y }) {
-		if (this.isGreater(x, y)) {
+		if (x === y) {
+			return msg.reply(`${x} is equal to ${y}.`)
+		}
+		 else if (this.isGreater(x, y)) {
 			return msg.reply(`${x} is greater than ${y}!`);
 		}
 		return msg.reply(`${x} is not greater than ${y} :(`);

@@ -1,18 +1,19 @@
-const { Command } = require('discord-akairo')
+const { Argument, Command } = require('discord-akairo')
 
 class DiceCommand extends Command {
     constructor () {
         super('dice', {
             aliases: ['dice'],
+            description: {
+				content: 'Compares your number to a dice',
+				usage: '<x>',
+				examples: ['1']
+			},
+			category: 'math',
             args: [
                 {
                     id: 'x',
-                    type: word => {
-                        if (!word || isNaN(word)) return null;
-                        const num = parseInt(word);
-                        if (num < 1 || num > 6) return null;
-                        return num;
-                    },
+                    type: Argument.range('number', 1, 6),
                     prompt: {
                         start: 'Guess a number 1-6:',
                         retry: 'Invalid number. Please enter a valid number.'
