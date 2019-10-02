@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 class BanCommand extends Command {
 	constructor() {
 		super('ban', {
