@@ -12,7 +12,7 @@ class EightBallCommand extends Command {
 			args: [
 				{
 					id: 'question',
-					type: String
+					type: 'string'
 				}
 			],
 			category: 'util',
