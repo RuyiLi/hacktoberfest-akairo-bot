@@ -1,34 +1,34 @@
 const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
 class KickCommand extends Command {
-	constructor() {
+	constructor () {
 		super('kick', {
 			aliases: ['kick'],
 			category: 'moderation',
 			description: {
 				content: 'Kicks a specified member from the current Discord guild.',
-				usage: '<member> <reason>',
+				usage: '<member> <reason>'
 			},
 			args: [
 				{
 					id: 'member',
-					type: 'member',
+					type: 'member'
 				},
 				{
 					id: 'reason',
 					match: 'rest',
-					type: 'string',
-				},
+					type: 'string'
+				}
 			],
 			channelRestriction: 'guild',
 			cooldown: 5000,
 			clientPermissions: ['ADMINISTRATOR'],
-			userPermissions: ['ADMINISTRATOR'],
+			userPermissions: ['ADMINISTRATOR']
 
 		});
 	}
 
-	async exec(message, args) {
+	async exec (message, args) {
 		const member = args.member;
 		const reason = args.reason;
 		if (message.channel.type === 'dm') {
@@ -44,7 +44,7 @@ class KickCommand extends Command {
 		}
 
 		await member.kick(reason).then(() => {
-			const embed = new RichEmbed()
+			const embed = new MessageEmbed()
 				.setTitle('Member kicked!')
 				.setColor(member.displayHexColor)
 				.setThumbnail(member.avatarURL)
@@ -53,17 +53,15 @@ class KickCommand extends Command {
                     '' +
                     `**Member**: ${member.user.tag}\n` +
                     '' +
-                    `**Reason**: ${reason}`,
+                    `**Reason**: ${reason}`
 				)
 				.setFooter('Powered by Hacktober 2019');
 
 			message.channel.send(embed);
-
 		}).catch((err) => {
 			message.channel.send(`I was unable to kick member **${member.user.tag}**.`);
 			this.client.logger.error(err);
 		});
-
 	}
 }
 
