@@ -9,8 +9,7 @@
 
 # Hacktoberfest Akairo Bot
 
-A Discord bot using the [discord-akairo](https://github.com/discord-akairo/discord-akairo) framework to increase your PR count for Hacktoberfest!
-
+A Discord bot using the [discord-akairo](https://github.com/discord-akairo/discord-akairo) framework to help beginners get started in Hacktoberfest!
 
 
 ## What is Hacktoberfest?  
